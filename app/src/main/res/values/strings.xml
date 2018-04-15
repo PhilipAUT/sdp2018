@@ -2,4 +2,8 @@
     <string name="app_name">AUTUNI APP</string>
     <string name="map_button">AUT MAPS</string>
     <string name="title_activity_autmap">Map</string>
+    <string name="title_activity_maps">AUT Map</string>
+    <string name="location_permission_denied">Location Denied</string>
+    <string name="permission_required_toast">You must enable location permissions to view the map</string>
+    <string name="permission_rationale_location">The location permission is needed to view the map</string>
 </resources>
