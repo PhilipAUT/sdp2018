@@ -2,6 +2,11 @@ package com.aut.sdp2018.autuniapp;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
@@ -17,6 +22,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polygon;
@@ -90,13 +96,20 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
     {
         mMap = googleMap;
 
+
         // Add a marker in Sydney and move the camera
-        LatLng auckland = new LatLng(-36,174);
-        mMap.addMarker(new MarkerOptions().position(auckland).title("Marker in Auckland"));
+        LatLng auckland = new LatLng(-36.85288,174.766080);
+        //mMap.addMarker(new MarkerOptions().position(auckland).title("Marker in Auckland"));
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(auckland));
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+
+        mMap.addMarker(new MarkerOptions().position(auckland).icon(BitmapDescriptorFactory.fromResource(R.drawable.bus)));
+
+        //mMap.addMarker(new MarkerOptions().position(auckland).icon(BitmapDescriptorFactory.fromResource(R.drawable.wa)));
+
 
         Polygon waBuilding = googleMap.addPolygon(new PolygonOptions()
                 .clickable(true)
@@ -111,6 +124,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
 // Store a data object with the polygon, used here to indicate an arbitrary type.
         waBuilding.setFillColor(0xffF57F17);
         waBuilding.setTag("AUT WA Building");
+
 
         Polygon wgBuilding = googleMap.addPolygon(new PolygonOptions()
                 .clickable(true)
