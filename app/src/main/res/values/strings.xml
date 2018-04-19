@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">AUTUNI APP</string>
     <string name="map_button">AUT MAPS</string>
+    <string name="event_button">EVENTS and CLUBS</string>
+    <string name="bustime_button">AUT BUS TIMES</string>
+    <string name="gamelauncher_button">SNAKE GAME</string>
     <string name="title_activity_autmap">Map</string>
     <string name="title_activity_maps">AUT Map</string>
     <string name="location_permission_denied">Location Denied</string>
