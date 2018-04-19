@@ -125,6 +125,21 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
         waBuilding.setFillColor(0xffF57F17);
         waBuilding.setTag("AUT WA Building");
 
+        Polygon whBuilding = googleMap.addPolygon(new PolygonOptions()
+                .clickable(true)
+                .add(
+                        new LatLng(-36.852099, 174.766009),
+                        new LatLng(-36.852077, 174.766146),
+                        new LatLng(-36.852145, 174.766162),
+                        new LatLng(-36.852239, 174.766292),
+                        new LatLng(-36.852826, 174.765995),
+                        new LatLng(-36.852782, 174.765783),
+                        new LatLng(-36.852452, 174.765982),
+                        new LatLng(-36.852332, 174.766023)));
+// Store a data object with the polygon, used here to indicate an arbitrary type.
+        whBuilding.setFillColor(0xffA57F17);
+        whBuilding.setTag("AUT WH Building");
+
 
         Polygon wgBuilding = googleMap.addPolygon(new PolygonOptions()
                 .clickable(true)
