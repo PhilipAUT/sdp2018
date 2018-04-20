@@ -53,6 +53,8 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
     private LatLng wyBuildingCenter = new LatLng(-36.853434, 174.764295);
     private LatLng wzBuildingCenter = new LatLng(-36.854069, 174.766795);
 
+    private float strokeWidth = 3.0f;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -189,7 +191,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853379, 174.766257),
                         new LatLng(-36.853100,174.766090)));
         waBuilding.setFillColor(0xffff0000);
-        waBuilding.setStrokeWidth(3f);
+        waBuilding.setStrokeWidth(strokeWidth);
         waBuilding.setTag("AUT WA Building");
         mMap.addMarker(new MarkerOptions().position(waBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wa)).flat(false));
 
@@ -204,7 +206,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853323, 174.767178),
                         new LatLng(-36.853351, 174.767124)));
         wbBuilding.setFillColor(0xff3bb0e2);
-        wbBuilding.setStrokeWidth(3f);
+        wbBuilding.setStrokeWidth(strokeWidth);
         wbBuilding.setTag("AUT WB Building");
         mMap.addMarker(new MarkerOptions().position(wbBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wb)).flat(false));
 
@@ -221,7 +223,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853692, 174.767088),
                         new LatLng(-36.853657, 174.766723)));
         wcBuilding.setFillColor(0xffFF00FF);
-        wcBuilding.setStrokeWidth(3f);
+        wcBuilding.setStrokeWidth(strokeWidth);
         wcBuilding.setTag("AUT WC Building");
         mMap.addMarker(new MarkerOptions().position(wcBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wc)).flat(false));
 
@@ -239,7 +241,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853914, 174.767385),
                         new LatLng(-36.853847, 174.766738)));
         wdBuilding.setFillColor(0xffFF0000);
-        wdBuilding.setStrokeWidth(3f);
+        wdBuilding.setStrokeWidth(strokeWidth);
         wdBuilding.setTag("AUT WD Building");
         mMap.addMarker(new MarkerOptions().position(wdBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wd)).flat(false));
 
@@ -259,7 +261,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853826, 174.766668),
                         new LatLng(-36.853735, 174.765920)));
         weBuilding.setFillColor(0xff88FF00);
-        weBuilding.setStrokeWidth(3f);
+        weBuilding.setStrokeWidth(strokeWidth);
         weBuilding.setTag("AUT WE Building");
         mMap.addMarker(new MarkerOptions().position(weBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.we)).flat(false));
 
@@ -276,7 +278,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853712, 174.765109),
                         new LatLng(-36.853545, 174.765023)));
         wfBuilding.setFillColor(0xff880000);
-        wfBuilding.setStrokeWidth(3f);
+        wfBuilding.setStrokeWidth(strokeWidth);
         wfBuilding.setTag("AUT WF Building");
         mMap.addMarker(new MarkerOptions().position(wfBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wf)).flat(false));
 
@@ -292,7 +294,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853280,174.765625),
                         new LatLng(-36.853184,174.765535)));
         wgBuilding.setFillColor(0xffffd700);
-        wgBuilding.setStrokeWidth(3f);
+        wgBuilding.setStrokeWidth(strokeWidth);
         wgBuilding.setTag("AUT WG Lecture Building");
         mMap.addMarker(new MarkerOptions().position(wgBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wg)).flat(false));
 
@@ -308,7 +310,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853523,174.765992),
                         new LatLng(-36.853596,174.765807)));
         wg2Building.setFillColor(0xffffd700);
-        wg2Building.setStrokeWidth(3f);
+        wg2Building.setStrokeWidth(strokeWidth);
         wg2Building.setTag("AUT WG Comms Building");
 
 
@@ -325,7 +327,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.852452, 174.765982),
                         new LatLng(-36.852332, 174.766023)));
         whBuilding.setFillColor(0xff88FF00);
-        whBuilding.setStrokeWidth(3f);
+        whBuilding.setStrokeWidth(strokeWidth);
         whBuilding.setTag("AUT WH Building");
         mMap.addMarker(new MarkerOptions().position(whBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wh)).flat(false));
 
@@ -341,7 +343,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.854220, 174.766003),
                         new LatLng(-36.854185, 174.765950)));
         wmBuilding.setFillColor(0xff88FF00);
-        wmBuilding.setStrokeWidth(3f);
+        wmBuilding.setStrokeWidth(strokeWidth);
         wmBuilding.setTag("AUT WM Building");
         mMap.addMarker(new MarkerOptions().position(wmBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wm)).flat(false));
 
@@ -354,7 +356,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.854519, 174.766276),
                         new LatLng(-36.854551, 174.766187)));
         wnBuilding.setFillColor(0xff00FF88);
-        wnBuilding.setStrokeWidth(3f);
+        wnBuilding.setStrokeWidth(strokeWidth);
         wnBuilding.setTag("AUT WN Building");
          mMap.addMarker(new MarkerOptions().position(wnBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wn)).flat(false));
 
@@ -369,7 +371,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.854288, 174.765832),
                         new LatLng(-36.854363, 174.765467)));
         woBuilding.setFillColor(0xff3bb0e2);
-        woBuilding.setStrokeWidth(3f);
+        woBuilding.setStrokeWidth(strokeWidth);
         woBuilding.setTag("AUT WO Building");
         mMap.addMarker(new MarkerOptions().position(woBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wo)).flat(false));
 
@@ -389,7 +391,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.854926, 174.766708),
                         new LatLng(-36.854957, 174.766632)));
         wrBuilding.setFillColor(0xff880000);
-        wrBuilding.setStrokeWidth(3f);
+        wrBuilding.setStrokeWidth(strokeWidth);
         wrBuilding.setTag("AUT WR Building");
         mMap.addMarker(new MarkerOptions().position(wrBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wr)).flat(false));
 
@@ -402,7 +404,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.852497, 174.764823),
                         new LatLng(-36.852611, 174.764514)));
         wtBuilding.setFillColor(0xff880088);
-        wtBuilding.setStrokeWidth(3f);
+        wtBuilding.setStrokeWidth(strokeWidth);
         wtBuilding.setTag("AUT WT Building");
         mMap.addMarker(new MarkerOptions().position(wtBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wt)).flat(false));
 
@@ -415,7 +417,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853843, 174.765464),
                         new LatLng(-36.853927, 174.765241)));
         wuBuilding.setFillColor(0xff123456);
-        wuBuilding.setStrokeWidth(3f);
+        wuBuilding.setStrokeWidth(strokeWidth);
         wuBuilding.setTag("AUT WU Building");
         mMap.addMarker(new MarkerOptions().position(wuBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wu)).flat(false));
 
@@ -432,7 +434,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.854573, 174.766835),
                         new LatLng(-36.854562, 174.766756)));
         wwBuilding.setFillColor(0xff123456);
-        wwBuilding.setStrokeWidth(3f);
+        wwBuilding.setStrokeWidth(strokeWidth);
         wwBuilding.setTag("AUT WW Building");
         mMap.addMarker(new MarkerOptions().position(wwBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ww)).flat(false));
 
@@ -445,7 +447,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853104, 174.764390),
                         new LatLng(-36.853183, 174.764158)));
         wxBuilding.setFillColor(0xff654321);
-        wxBuilding.setStrokeWidth(3f);
+        wxBuilding.setStrokeWidth(strokeWidth);
         wxBuilding.setTag("AUT WX Building");
         mMap.addMarker(new MarkerOptions().position(wxBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wx)).flat(false));
 
@@ -458,7 +460,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853418, 174.764600),
                         new LatLng(-36.853610, 174.764126)));
         wyBuilding.setFillColor(0xffffd700);
-        wyBuilding.setStrokeWidth(3f);
+        wyBuilding.setStrokeWidth(strokeWidth);
         wyBuilding.setTag("AUT WY Building");
         mMap.addMarker(new MarkerOptions().position(wyBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wy)).flat(false));
 
@@ -471,7 +473,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.854212, 174.767136),
                         new LatLng(-36.854121, 174.766355)));
         wzBuilding.setFillColor(0xffffd700);
-        wzBuilding.setStrokeWidth(3f);
+        wzBuilding.setStrokeWidth(strokeWidth);
         wzBuilding.setTag("AUT WZ Building");
         mMap.addMarker(new MarkerOptions().position(wzBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wz)).flat(false));
 

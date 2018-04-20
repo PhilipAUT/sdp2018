@@ -37,7 +37,9 @@
 
         <activity
             android:name=".AUTMap"
-            android:label="@string/title_activity_autmap"></activity>
+            android:label="@string/title_activity_autmap"
+            android:parentActivityName=".MainMenu"></activity>
+
     </application>
 
 </manifest>
