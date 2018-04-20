@@ -172,6 +172,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
 
         mMap = googleMap;
         mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.setBuildingsEnabled(false);
 
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
@@ -189,7 +190,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853100,174.766090)));
         waBuilding.setFillColor(0xffff0000);
         waBuilding.setTag("AUT WA Building");
-        mMap.addMarker(new MarkerOptions().position(waBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wa)).flat(true));
+        mMap.addMarker(new MarkerOptions().position(waBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wa)));
 
         //WB Building
         Polygon wbBuilding = googleMap.addPolygon(new PolygonOptions()
@@ -203,7 +204,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853351, 174.767124)));
         wbBuilding.setFillColor(0xff3bb0e2);
         wbBuilding.setTag("AUT WB Building");
-        mMap.addMarker(new MarkerOptions().position(wbBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wb)).flat(true));
+        mMap.addMarker(new MarkerOptions().position(wbBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wb)));
 
         //WC Building
         Polygon wcBuilding = googleMap.addPolygon(new PolygonOptions()
@@ -219,7 +220,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853657, 174.766723)));
         wcBuilding.setFillColor(0xffFF00FF);
         wcBuilding.setTag("AUT WC Building");
-        mMap.addMarker(new MarkerOptions().position(wcBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wc)).flat(true));
+        mMap.addMarker(new MarkerOptions().position(wcBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wc)));
 
         //WD Building
         Polygon wdBuilding = googleMap.addPolygon(new PolygonOptions()
@@ -236,7 +237,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853847, 174.766738)));
         wdBuilding.setFillColor(0xffFF0000);
         wdBuilding.setTag("AUT WD Building");
-        mMap.addMarker(new MarkerOptions().position(wdBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wd)).flat(true));
+        mMap.addMarker(new MarkerOptions().position(wdBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wd)));
 
         //WE Building
         Polygon weBuilding = googleMap.addPolygon(new PolygonOptions()
@@ -255,7 +256,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853735, 174.765920)));
         weBuilding.setFillColor(0xff88FF00);
         weBuilding.setTag("AUT WE Building");
-        mMap.addMarker(new MarkerOptions().position(weBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.we)).flat(true));
+        mMap.addMarker(new MarkerOptions().position(weBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.we)));
 
         //WF Building
         Polygon wfBuilding = googleMap.addPolygon(new PolygonOptions()
@@ -271,7 +272,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853545, 174.765023)));
         wfBuilding.setFillColor(0xff880000);
         wfBuilding.setTag("AUT WF Building");
-        mMap.addMarker(new MarkerOptions().position(wfBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wf)).flat(true));
+        mMap.addMarker(new MarkerOptions().position(wfBuildingCenter).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wf)));
 
 
         //WG Building
