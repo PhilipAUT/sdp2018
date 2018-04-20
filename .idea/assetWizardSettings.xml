@@ -99,7 +99,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="text" value="WF" />
+                                                <entry key="text" value="WW" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -110,8 +110,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="TEXT" />
-                                      <entry key="backgroundColor" value="000000" />
-                                      <entry key="outputName" value="wf" />
+                                      <entry key="backgroundColor" value="e5660d" />
+                                      <entry key="outputName" value="ww" />
                                     </map>
                                   </option>
                                 </PersistentState>
