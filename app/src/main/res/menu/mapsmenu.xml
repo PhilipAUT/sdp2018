@@ -1,5 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/findBuilding"
+        android:title="Find a Building">
+        <menu>
+            <item android:id="@+id/autCityCampus"
+                android:title="AUT CITY CAMPUS">
+                <menu>
+                    <item android:id="@+id/waBuilding"
+                        android:title="WA"
+                        />
+                    <item android:id="@+id/wbBuilding"
+                        android:title="WB"
+                        />
+                    <item android:id="@+id/wcBuilding"
+                        android:title="WC"
+                        />
+                    <item android:id="@+id/wdBuilding"
+                        android:title="WD"
+                        />
+                    <item android:id="@+id/weBuilding"
+                        android:title="WE"
+                        />
+                    <item android:id="@+id/wfBuilding"
+                        android:title="WF"
+                        />
+                    <item android:id="@+id/wgBuilding"
+                        android:title="WG"
+                        />
+                    <item android:id="@+id/whBuilding"
+                        android:title="WH"
+                        />
+                    <item android:id="@+id/wmBuilding"
+                        android:title="WM"
+                        />
+                    <item android:id="@+id/wnBuilding"
+                        android:title="WN"
+                        />
+                    <item android:id="@+id/woBuilding"
+                        android:title="WO"
+                        />
+                    <item android:id="@+id/wrBuilding"
+                        android:title="WR"
+                        />
+                    <item android:id="@+id/wtBuilding"
+                        android:title="WT"
+                        />
+                    <item android:id="@+id/wuBuilding"
+                        android:title="WU"
+                        />
+                    <item android:id="@+id/wwBuilding"
+                        android:title="WW"
+                        />
+                    <item android:id="@+id/wxBuilding"
+                        android:title="WX"
+                        />
+                    <item android:id="@+id/wyBuilding"
+                        android:title="WY"
+                        />
+                    <item android:id="@+id/wzBuilding"
+                        android:title="WZ"
+                        />
+                </menu>
+
+            </item>
+            <item android:id="@+id/autNorthCampus"
+                android:title="AUT NORTH SHORE">
+                <menu>
+                    <item android:id="@+id/comingSoon"
+                        android:title="Coming Soon!"/>
+                </menu>
+            </item>
+
+            <item android:id="@+id/autSouthCampus"
+                android:title="AUT MANUKAU">
+                <menu>
+                    <item android:id="@+id/comingSoon2"
+                        android:title="Coming Soon Maybe!"/>
+                </menu>
+            </item>
+        </menu>
+    </item>
+
     <item android:id="@+id/streetmap"
         android:title="Street Map"
         />

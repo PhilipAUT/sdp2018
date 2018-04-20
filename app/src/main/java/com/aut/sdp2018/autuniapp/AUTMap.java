@@ -22,8 +22,10 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
@@ -94,23 +96,13 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
     @Override
     public void onMapReady(GoogleMap googleMap)
     {
+
         mMap = googleMap;
+        mMap.getUiSettings().setZoomControlsEnabled(true);
 
-
-        // Add a marker in Sydney and move the camera
-        LatLng auckland = new LatLng(-36.85288,174.766080);
-        //mMap.addMarker(new MarkerOptions().position(auckland).title("Marker in Auckland"));
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(auckland));
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
-
-        mMap.addMarker(new MarkerOptions().position(auckland).icon(BitmapDescriptorFactory.fromResource(R.drawable.bus)));
-
-        //mMap.addMarker(new MarkerOptions().position(auckland).icon(BitmapDescriptorFactory.fromResource(R.drawable.wa)));
-
-
+        //WA Building
         Polygon waBuilding = googleMap.addPolygon(new PolygonOptions()
                 .clickable(true)
                 .add(
@@ -121,10 +113,10 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853437,174.766814),
                         new LatLng(-36.853379, 174.766257),
                         new LatLng(-36.853100,174.766090)));
-// Store a data object with the polygon, used here to indicate an arbitrary type.
         waBuilding.setFillColor(0xffF57F17);
         waBuilding.setTag("AUT WA Building");
 
+        //WH Building
         Polygon whBuilding = googleMap.addPolygon(new PolygonOptions()
                 .clickable(true)
                 .add(
@@ -136,10 +128,10 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.852782, 174.765783),
                         new LatLng(-36.852452, 174.765982),
                         new LatLng(-36.852332, 174.766023)));
-// Store a data object with the polygon, used here to indicate an arbitrary type.
         whBuilding.setFillColor(0xffA57F17);
         whBuilding.setTag("AUT WH Building");
 
+        //WZ Building
         Polygon wzBuilding = googleMap.addPolygon(new PolygonOptions()
                 .clickable(true)
                 .add(
@@ -147,10 +139,10 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.854018, 174.767160),
                         new LatLng(-36.854212, 174.767136),
                         new LatLng(-36.854121, 174.766355)));
-// Store a data object with the polygon, used here to indicate an arbitrary type.
         wzBuilding.setFillColor(0xff127F17);
         wzBuilding.setTag("AUT WZ Building");
 
+        //WF Building
         Polygon wfBuilding = googleMap.addPolygon(new PolygonOptions()
                 .clickable(true)
                 .add(
@@ -162,11 +154,10 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853536, 174.765577),
                         new LatLng(-36.853712, 174.765109),
                         new LatLng(-36.853545, 174.765023)));
-// Store a data object with the polygon, used here to indicate an arbitrary type.
         wfBuilding.setFillColor(0xffABAD17);
         wfBuilding.setTag("AUT WF Building");
 
-
+        //WG Building
         Polygon wgBuilding = googleMap.addPolygon(new PolygonOptions()
                 .clickable(true)
                 .add(
@@ -176,10 +167,10 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853179,174.765835),
                         new LatLng(-36.853280,174.765625),
                         new LatLng(-36.853184,174.765535)));
-// Store a data object with the polygon, used here to indicate an arbitrary type.
         wgBuilding.setFillColor(0xFFE57373);
         wgBuilding.setTag("AUT WG Lecture Building");
 
+        //WG Building 2
         Polygon wg2Building = googleMap.addPolygon(new PolygonOptions()
                 .clickable(true)
                 .add(
@@ -190,16 +181,18 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                         new LatLng(-36.853552,174.766257),
                         new LatLng(-36.853523,174.765992),
                         new LatLng(-36.853596,174.765807)));
-// Store a data object with the polygon, used here to indicate an arbitrary type.
         wg2Building.setFillColor(0xFF32CD32);
         wg2Building.setTag("AUT WG Comms Building");
 
         googleMap.setOnPolygonClickListener(this);
         mMap.setOnMyLocationButtonClickListener(this);
         mMap.setOnMyLocationClickListener(this);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-36.85288, 174.766080),16));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-36.85288, 174.766080),17));
+        mMap.setMinZoomPreference(16);
+        mMap.setMaxZoomPreference(19);
+        LatLngBounds b1 = new LatLngBounds(new LatLng(-36.859108, 174.759182), new LatLng(-36.849896, 174.771771));
+        mMap.setLatLngBoundsForCameraTarget(b1);
         enableMyLocation();
-
 
     }
 
