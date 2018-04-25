@@ -38,8 +38,15 @@
         <activity
             android:name=".AUTMap"
             android:label="@string/title_activity_autmap"
-            android:parentActivityName=".MainMenu"></activity>
-
+            android:parentActivityName=".MainMenu" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainMenu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aut.sdp2018.autuniapp.MainMenu" />
+        </activity>
     </application>
 
 </manifest>
