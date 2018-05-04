@@ -558,5 +558,15 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
     {
         Toast.makeText(this,polygon.getTag().toString(),Toast.LENGTH_SHORT).show();
     }
+
+    public String getWAcenter()
+    {
+        return waBuildingCenter.toString();
+    }
+
+    public GoogleMap getMap()
+    {
+        return mMap;
+    }
 }
 

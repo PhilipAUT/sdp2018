@@ -1,5 +1,9 @@
 package com.aut.sdp2018.autuniapp;
 
+import android.view.MenuItem;
+
+import com.google.android.gms.maps.GoogleMap;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -9,9 +13,34 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class ExampleUnitTest {
+public class ExampleUnitTest
+{
     @Test
-    public void addition_isCorrect() {
+    public void addition_isCorrect()
+    {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    public void testMapPointToString()
+    {
+        AUTMap m1 = new AUTMap();
+        System.out.println(m1.getWAcenter());
+    }
+
+    @Test
+    public void testNotNullLocation()
+    {
+        AUTMap m1 = new AUTMap();
+        assertNotNull(m1.getWAcenter());
+    }
+
+
+    @Test
+    public void testStartupMapStyle()
+    {
+
+    }
+
+
 }
