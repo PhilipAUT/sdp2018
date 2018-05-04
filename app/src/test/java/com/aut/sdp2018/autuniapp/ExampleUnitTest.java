@@ -24,7 +24,7 @@ public class ExampleUnitTest
     }
 
     @Test
-    public void testMapPointToString()
+    public void testMapPointToStringBasic()
     {
         AUTMap m1 = new AUTMap();
         System.out.println(m1.getWAcenter());
