@@ -30,6 +30,7 @@ public class MainMenu extends AppCompatActivity
     {
         Intent autMap = new Intent(this,AUTMap.class);
         startActivity(autMap);
+        System.out.println("Maps opened");
     }
 
      /*
