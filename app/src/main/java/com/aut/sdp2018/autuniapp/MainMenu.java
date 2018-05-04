@@ -7,9 +7,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainMenu extends AppCompatActivity
 {
+
+    /*
+        Its a constructor that invokes the main menu from the xml code.
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -17,6 +22,9 @@ public class MainMenu extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
     }
+        /*
+         When clicked, opens the Aut Map component of the app.
+        */
 
     public void openMapActivity(View view)
     {
@@ -24,12 +32,30 @@ public class MainMenu extends AppCompatActivity
         startActivity(autMap);
     }
 
+     /*
+       For app buttons that hasn't developed yet, a message is displayed  through the comingSoon method.
+     */
+
+
+    public void  comingSoon(View view)
+    {
+        Toast.makeText(getApplicationContext(),"Coming Soon",Toast.LENGTH_LONG).show();
+    }
+
+    /*
+       This invokes the setiings component in  the app.
+     */
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.mainmenusettings, menu);
         return true;
     }
+
+      /*
+       When clicked, opens the settings component of the app
+     */
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
