@@ -30,7 +30,7 @@ public class MainMenu extends AppCompatActivity
     {
         Intent autMap = new Intent(this,AUTMap.class);
         startActivity(autMap);
-        System.out.println("Maps opened");
+        System.out.println("##Maps opening...##");
     }
 
      /*
@@ -41,6 +41,9 @@ public class MainMenu extends AppCompatActivity
     public void  comingSoon(View view)
     {
         Toast.makeText(getApplicationContext(),"Coming Soon",Toast.LENGTH_LONG).show();
+        System.out.println("##Coming soon Message Displayed##");
+
+
     }
 
     /*
@@ -51,6 +54,7 @@ public class MainMenu extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.mainmenusettings, menu);
+        System.out.println("##Create Menu##");
         return true;
     }
 
@@ -63,8 +67,10 @@ public class MainMenu extends AppCompatActivity
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.settings:
+                System.out.println("##Setting Option Selected##");
                 Intent settings = new Intent(this, SettingsActivity.class);
                 startActivity(settings);
+                System.out.println("##Start Setting Activity...##");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

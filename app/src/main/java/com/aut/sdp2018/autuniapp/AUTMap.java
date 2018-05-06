@@ -43,7 +43,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_autmap );
-        System.out.println("Maps actually opened");
+        System.out.println("##Maps actually opened##");
         poiMarker = new AUTPOIMarkers();
         menuManager = new MapMenuManager();
         buildings = new AUTMapBuildings();
