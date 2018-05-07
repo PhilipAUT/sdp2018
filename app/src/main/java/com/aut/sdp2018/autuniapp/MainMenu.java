@@ -46,6 +46,15 @@ public class MainMenu extends AppCompatActivity
 
     }
 
+    /*Start the SnakeGame app*/
+    public void startGame(View view)
+    {
+        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.SDP.SnakeGame");
+        if (launchIntent != null) {
+            startActivity(launchIntent);//null pointer check in case package name was not found
+        }
+    }
+
     /*
        This invokes the setiings component in  the app.
      */
