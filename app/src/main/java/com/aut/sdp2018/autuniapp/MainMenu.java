@@ -12,20 +12,16 @@ import android.widget.Toast;
 public class MainMenu extends AppCompatActivity
 {
 
-    /*
-        Its a constructor that invokes the main menu from the xml code.
-    */
-
+    //A constructor that invokes the main menu from the xml code.
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
     }
-        /*
-         When clicked, opens the Aut Map component of the app.
-        */
 
+
+    // When clicked, opens the Aut Map component of the app.
     public void openMapActivity(View view)
     {
         Intent autMap = new Intent(this,AUTMap.class);
@@ -33,32 +29,26 @@ public class MainMenu extends AppCompatActivity
         System.out.println("##Maps opening...##");
     }
 
-     /*
-       For app buttons that hasn't developed yet, a message is displayed  through the comingSoon method.
-     */
-
-
+    //For app buttons that hasn't developed yet, a message is displayed  through the comingSoon method.
     public void  comingSoon(View view)
     {
         Toast.makeText(getApplicationContext(),"Coming Soon",Toast.LENGTH_LONG).show();
         System.out.println("##Coming soon Message Displayed##");
-
-
     }
 
-    /*Start the SnakeGame app*/
+
+    //Start the SnakeGame app
     public void startGame(View view)
     {
         Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.SDP.SnakeGame");
-        if (launchIntent != null) {
-            startActivity(launchIntent);//null pointer check in case package name was not found
+        if (launchIntent != null)//null pointer check in case package name was not found
+        {
+            startActivity(launchIntent);
         }
     }
 
-    /*
-       This invokes the setiings component in  the app.
-     */
 
+    //This invokes the setiings component in  the app.
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -67,10 +57,7 @@ public class MainMenu extends AppCompatActivity
         return true;
     }
 
-      /*
-       When clicked, opens the settings component of the app
-     */
-
+    //When clicked, opens the settings component of the app
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
