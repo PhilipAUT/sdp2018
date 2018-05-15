@@ -15,9 +15,10 @@ import android.widget.Toast;
 /**
  * Utility class for access to runtime permissions.
  */
+//This class is taken in part from the Google Github and slightly changed to work in this app.
 public abstract class PermissionUtils
 {
-    private String denided = "Permision Denined";
+
 
     /**
      * Requests the fine location permission. If a rationale with an additional explanation should

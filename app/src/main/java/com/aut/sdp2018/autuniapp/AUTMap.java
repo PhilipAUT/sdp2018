@@ -37,13 +37,16 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
     private MapMenuManager menuManager;
     private AUTMapBuildings buildings;
     private float strokeWidth = 3.0f;
+    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
+    private boolean mPermissionDenied = false;
 
+    //Constructor for Maps activity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_autmap );
-        System.out.println("Maps actually opened");
+        System.out.println("##Maps actually opened##");
         poiMarker = new AUTPOIMarkers();
         menuManager = new MapMenuManager();
         buildings = new AUTMapBuildings();
@@ -54,9 +57,9 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
-    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
-    private boolean mPermissionDenied = false;
 
+
+    //Creates Options menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -65,10 +68,11 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
         return true;
     }
 
+    //Manages Menu Selection Inputs
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-        if(menuManager.manageInput(mMap,item,poiMarker))
+        if(menuManager.manageInput(mMap,item,poiMarker))//Calls menu management function
         {
             return true;
         }
@@ -76,6 +80,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
     }
 
 
+    //Creates the Google Map view and loads features
     @Override
     public void onMapReady(GoogleMap googleMap)
     {
@@ -99,6 +104,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
 
     }
 
+    //Function for allowing GPS to be used by the user
     private void enableMyLocation()
     {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
@@ -121,6 +127,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
         return false;
     }
 
+    //Shows some data on the GPS location of the user
     @Override
     public void onMyLocationClick(@NonNull Location location)
     {
@@ -140,7 +147,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
             // Enable the my location layer if the permission has been granted.
             enableMyLocation();
         } else
-            {
+        {
             // Display the missing permission error dialog when the fragments resume.
             mPermissionDenied = true;
         }
@@ -157,9 +164,8 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
         }
     }
 
-    /**
-     * Displays a dialog with error message explaining that the location permission is missing.
-     */
+
+    //Displays a dialog with error message explaining that the location permission is missing.
     private void showMissingPermissionError()
     {
         PermissionUtils.PermissionDeniedDialog
@@ -167,6 +173,7 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
     }
 
 
+    //Sends a toast to the user saying what building they clicked
     @Override
     public void onPolygonClick(Polygon polygon)
     {
