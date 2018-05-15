@@ -19,8 +19,10 @@ public class MainMenu extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+        System.out.print("Menu Opened\n");
     }
         /*
          When clicked, opens the Aut Map component of the app.
@@ -30,7 +32,7 @@ public class MainMenu extends AppCompatActivity
     {
         Intent autMap = new Intent(this,AUTMap.class);
         startActivity(autMap);
-        System.out.println("Maps opened");
+        System.out.println("Maps Clicked\n");
     }
 
      /*
@@ -49,9 +51,12 @@ public class MainMenu extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
+        System.out.println("Settings Clicked\n");
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.mainmenusettings, menu);
         return true;
+
     }
 
       /*
@@ -61,6 +66,8 @@ public class MainMenu extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
+        System.out.println("Settings opened");
+
         switch (item.getItemId()) {
             case R.id.settings:
                 Intent settings = new Intent(this, SettingsActivity.class);
