@@ -47,6 +47,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.aut.sdp2018.autuniapp.MainMenu" />
         </activity>
+        <activity android:name=".Events"></activity>
     </application>
 
 </manifest>

@@ -33,6 +33,16 @@ public class MainMenu extends AppCompatActivity
 
     }
 
+    // When clicked, opens the AUT Events component of the app.
+    public void openEventsActivity(View view)
+    {
+        Intent events = new Intent(this,Events.class);
+        startActivity(events);
+        System.out.println("Events Clicked\n");
+        System.out.println("Events opening...##");
+
+    }
+
     //For app buttons that hasn't developed yet, a message is displayed  through the comingSoon method.
     public void  comingSoon(View view)
     {
