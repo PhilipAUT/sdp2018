@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Events">
+    tools:context=".Events"
+    android:title="EVENTS AT AUT ">
+
+    <menu><item android:id="@+id/button3"
+        android:title="Event 1" />
+    </menu>
 
 </android.support.constraint.ConstraintLayout>
