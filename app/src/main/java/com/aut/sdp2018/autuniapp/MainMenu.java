@@ -43,6 +43,15 @@ public class MainMenu extends AppCompatActivity
 
     }
 
+    public void openAUTBusActivity(View view)
+    {
+        Intent bus = new Intent(this,AUTBus.class);
+        startActivity(bus);
+        System.out.println("Events Clicked\n");
+        System.out.println("Events opening...##");
+
+    }
+
     //For app buttons that hasn't developed yet, a message is displayed  through the comingSoon method.
     public void  comingSoon(View view)
     {

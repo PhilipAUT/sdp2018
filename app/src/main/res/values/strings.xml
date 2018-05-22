@@ -10,7 +10,7 @@
     <string name="permission_required_toast">You must enable location permissions to view the map</string>
     <string name="permission_rationale_location">The location permission is needed to view the map</string>
     <string name="title_activity_settings">Settings</string>
-
+    <string name="time1">NAN</string>
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->

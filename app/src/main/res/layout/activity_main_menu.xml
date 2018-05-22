@@ -31,7 +31,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:background="@color/BusCoulor"
-        android:onClick="comingSoon"
+        android:onClick="openAUTBusActivity"
         android:text="@string/bustime_button"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toStartOf="@+id/button"
