@@ -68,6 +68,10 @@ public class MainMenu extends AppCompatActivity
         {
             startActivity(launchIntent);
         }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"Looks like you don't have the game installed\nThat's a shame :(",Toast.LENGTH_LONG).show();
+        }
     }
 
 

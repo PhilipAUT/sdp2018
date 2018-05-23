@@ -28,7 +28,7 @@ public class BusTime
         this.arriveHrs = arriveHrs;
         this.arriveMins = arriveMins;
         due = false;
-        timeRemaining = "Error";
+        timeRemaining = "??";
     }
 
     @Override

@@ -48,7 +48,10 @@
                 android:value="com.aut.sdp2018.autuniapp.MainMenu" />
         </activity>
         <activity android:name=".Events" />
-        <activity android:name=".AUTBus"></activity>
+        <activity
+            android:name=".AUTBus"
+            android:parentActivityName=".MainMenu">
+        </activity>
     </application>
 
 </manifest>
