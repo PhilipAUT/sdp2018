@@ -3,6 +3,7 @@ package com.aut.sdp2018.autuniapp;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
@@ -314,5 +315,10 @@ public class AUTMapBuildings
         wzBuilding.setStrokeWidth(strokeWidth);
         wzBuilding.setTag("AUT WZ Building");
         mMap.addMarker(new MarkerOptions().position(poiMarker.getWzBuildingCenter()).icon(BitmapDescriptorFactory.fromResource(R.mipmap.wz)).flat(false));
+        Marker northBusMarker = mMap.addMarker(new MarkerOptions().position(poiMarker.getNorthBus()).icon(BitmapDescriptorFactory.fromResource(R.mipmap.northbus)).flat(false));
+        northBusMarker.setTitle("AUT Shuttle North");
+        Marker southBusMarker = mMap.addMarker(new MarkerOptions().position(poiMarker.getSouthBus()).icon(BitmapDescriptorFactory.fromResource(R.mipmap.southbus)).flat(false));
+        southBusMarker.setTitle("AUT Shuttle South");
+
     }
 }

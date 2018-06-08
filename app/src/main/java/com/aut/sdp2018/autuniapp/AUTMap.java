@@ -26,11 +26,12 @@ import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
 
-public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnPolygonClickListener,GoogleMap.OnMyLocationClickListener,GoogleMap.OnMyLocationButtonClickListener {
+public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnPolygonClickListener,GoogleMap.OnMyLocationClickListener,GoogleMap.OnMyLocationButtonClickListener ,GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
     private AUTPOIMarkers poiMarker;
@@ -178,6 +179,17 @@ public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, Goo
     public void onPolygonClick(Polygon polygon)
     {
         Toast.makeText(this,polygon.getTag().toString(),Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onMarkerClick(final Marker marker)
+    {
+        if(marker.getTitle()=="AUT Shuttle North")
+        {
+            Toast.makeText(getApplicationContext(),"north",Toast.LENGTH_LONG).show();
+            return true;
+        }
+        return false;
     }
 
 }

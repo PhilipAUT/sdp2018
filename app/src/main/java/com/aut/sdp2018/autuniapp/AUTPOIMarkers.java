@@ -25,6 +25,8 @@ public class AUTPOIMarkers
     private LatLng wxBuildingCenter;
     private LatLng wyBuildingCenter;
     private LatLng wzBuildingCenter;
+    private LatLng northBus;
+    private LatLng southBus;
 
     //Creates the POI CoOrds and then calls the createPOI function
     public AUTPOIMarkers()
@@ -47,6 +49,8 @@ public class AUTPOIMarkers
         wxBuildingCenter = new LatLng(-36.853030, 174.764211);
         wyBuildingCenter = new LatLng(-36.853434, 174.764295);
         wzBuildingCenter = new LatLng(-36.854069, 174.766795);
+        northBus = new LatLng(-36.852594, 174.765773);
+        southBus = new LatLng(-36.852849, 174.765639);
         createPOIs();
     }
 
@@ -71,6 +75,8 @@ public class AUTPOIMarkers
         poiData.add(wxBuildingCenter);
         poiData.add(wyBuildingCenter);
         poiData.add(wzBuildingCenter);
+        poiData.add(northBus);
+        poiData.add(southBus);
     }
 
     //Getter Methods for Either the individual POI or the Data Structure
@@ -148,5 +154,13 @@ public class AUTPOIMarkers
 
     public LatLng getWzBuildingCenter() {
         return wzBuildingCenter;
+    }
+
+    public LatLng getNorthBus() {
+        return northBus;
+    }
+
+    public LatLng getSouthBus() {
+        return southBus;
     }
 }
