@@ -3,7 +3,9 @@ package com.aut.sdp2018.autuniapp;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
-
+//
+//AUTHOR = PHILIP
+//
 public class AUTPOIMarkers
 {
     private ArrayList<LatLng> poiData = new ArrayList<>();

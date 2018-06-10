@@ -3,6 +3,9 @@ package com.aut.sdp2018.autuniapp;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+//
+//AUTHOR = PHILIP
+//
 public class TimeTableManager
 {
     private ArrayList<BusTime> cityToSouth;
@@ -11,6 +14,8 @@ public class TimeTableManager
     private ArrayList<BusTime> northToCity;
     private Calendar currentTime;
 
+    //Constructor that builds each of the time tables for each route
+    //Also grabs the current time
     public TimeTableManager()
     {
         popualateCityToSouth();
@@ -20,6 +25,7 @@ public class TimeTableManager
         currentTime = Calendar.getInstance();
     }
 
+    //bus time data for the city to south campus route
     private void popualateCityToSouth()
     {
         cityToSouth = new ArrayList<>();
@@ -53,6 +59,7 @@ public class TimeTableManager
         cityToSouth.add(new BusTime("21","00","21","30"));
     }
 
+    //bus time data for the city to north campus route
     private void popualateCityToNorth()
     {
         cityToNorth = new ArrayList<>();
@@ -101,6 +108,8 @@ public class TimeTableManager
 
 
     }
+
+    //bus time data for the south to ciy campus route
     private void popualateSouthToCity()
     {
         southToCity = new ArrayList<>();
@@ -132,6 +141,8 @@ public class TimeTableManager
         southToCity.add(new BusTime("19","15","19","45"));
         southToCity.add(new BusTime("20","15","20","45"));
     }
+
+    //bus time data for the north to city campus route
     private void popualateNorthToCity()
     {
         northToCity = new ArrayList<>();
@@ -179,6 +190,7 @@ public class TimeTableManager
         northToCity.add(new BusTime("20","50","21","05"));
     }
 
+    //grabs the bus times based on the requested timetable input
     public String testTimes(int index, int timetable)
     {
         if(timetable == 1)
@@ -205,6 +217,7 @@ public class TimeTableManager
 
     }
 
+    //returns the size of the timetable requested
     public int testSize(int timetable)
     {
         if(timetable == 1)
@@ -230,6 +243,10 @@ public class TimeTableManager
 
     }
 
+    //compares the input bus time to the users current time
+    //returns 0 if times are the same
+    //returns 1 if the bus times are later than the current time
+    //returns -1 if the bus times are earlier than the current time, eg the bus has departed
     private int compareTime(int hrs, int mins)
     {
 
@@ -255,6 +272,7 @@ public class TimeTableManager
         else return 1;
     }
 
+    //goes through the array of bus times and removes buses have already departed
     public void updateTimes()
     {
         for(int i = cityToSouth.size() -1; i >= 0; i--)

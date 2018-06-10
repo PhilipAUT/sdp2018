@@ -30,7 +30,9 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
-
+//
+//AUTHOR = PHILIP
+//
 public class AUTMap extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnPolygonClickListener,GoogleMap.OnMyLocationClickListener,GoogleMap.OnMyLocationButtonClickListener ,GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;

@@ -13,8 +13,11 @@ import android.widget.Toast;
 
 
 import java.util.ArrayList;
+//
+//AUTHOR = PHILIP
+//
 
-
+//Main Class for the AUT BUS Activity
 public class AUTBus extends AppCompatActivity {
 
     private ArrayList<TextView> textViewarray = new ArrayList<>();
@@ -36,6 +39,7 @@ public class AUTBus extends AppCompatActivity {
 
     }
 
+    //Creates and Displays the city to south campus bus timetable
     public void citySouth(View view)
     {
         Toast.makeText(getApplicationContext(),"Showing City to South Campus Departures",Toast.LENGTH_LONG).show();
@@ -43,6 +47,7 @@ public class AUTBus extends AppCompatActivity {
         createList(1);
     }
 
+    //Creates and displays the city to north campus bus timetable
     public void cityNorth(View view)
     {
         Toast.makeText(getApplicationContext(),"Showing City to North Campus Departures",Toast.LENGTH_LONG).show();
@@ -50,6 +55,7 @@ public class AUTBus extends AppCompatActivity {
         createList(2);
     }
 
+    //Creates and displays the south to city campus bus timetable
     public void southCity(View view)
     {
         Toast.makeText(getApplicationContext(),"Showing South to City Campus Departures",Toast.LENGTH_LONG).show();
@@ -57,6 +63,7 @@ public class AUTBus extends AppCompatActivity {
         createList(3);
     }
 
+    //Creates and displays the north to city campus bus timetable
     public void northCity(View view)
     {
         Toast.makeText(getApplicationContext(),"Showing North to City Campus Departures",Toast.LENGTH_LONG).show();
@@ -64,6 +71,7 @@ public class AUTBus extends AppCompatActivity {
         createList(4);
     }
 
+    //Clears the text view elements from the linear layout container visible to the user
     public void clearList()
     {
         for(int i = 0; i < textViewarray.size(); i++)
@@ -75,11 +83,12 @@ public class AUTBus extends AppCompatActivity {
         textViewarray.clear();
     }
 
+    //Creates a list of all bus times for the selected bus timetable provided
+    //Initially creates an array of bus times in a textviewarray.  Then populates the linear layout with each element from the array
     private void createList(int timetable)
     {
         TimeTableManager t1 = new TimeTableManager();
 
-//        clearList();
         t1.updateTimes();
         System.out.println(textViewarray.size());
         if(textViewarray.size()==0)
@@ -101,7 +110,7 @@ public class AUTBus extends AppCompatActivity {
             }
         }
 
-
+        //populates the linear layout
         for(int i = 0; i < textViewarray.size(); i++)
         {
             ((LinearLayout) linearLayout).addView(textViewarray.get(i));

@@ -10,6 +10,7 @@ public class BusTime
     private String timeRemaining;
 
 
+    //Default Constructor
     public BusTime()
     {
         departHrs = "-1";
@@ -21,6 +22,7 @@ public class BusTime
         timeRemaining = "Error";
     }
 
+    //Constructor for creating a valid bus time
     public BusTime(String departHrs,String departMins,String arriveHrs, String arriveMins)
     {
         this.departHrs = departHrs;

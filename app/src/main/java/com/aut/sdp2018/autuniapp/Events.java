@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
+//
+//AUTHOR = VIDHYA
+//
 public class Events extends ListActivity {
 
     @Override

@@ -5,6 +5,10 @@ import android.view.MenuItem;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 
+//
+//AUTHOR = PHILIP
+//
+
 public class MapMenuManager
 {
     public MapMenuManager()
