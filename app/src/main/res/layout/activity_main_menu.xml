@@ -48,7 +48,7 @@
         android:layout_marginTop="16dp"
         android:background="@color/eventColour"
         android:onClick="openEventsActivity"
-        android:text="EVENTS"
+        android:text="@string/event_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintStart_toStartOf="parent"

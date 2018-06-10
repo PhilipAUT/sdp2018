@@ -11,7 +11,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/aut_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -37,7 +37,8 @@
 
         <activity
             android:name=".AUTMap"
-            android:label="@string/title_activity_autmap"
+            android:theme="@style/MapTheme"
+            android:label="@string/title_activity_maps"
             android:parentActivityName=".MainMenu" />
         <activity
             android:name=".SettingsActivity"
@@ -50,6 +51,8 @@
         <activity android:name=".Events" />
         <activity
             android:name=".AUTBus"
+            android:label="AUT Bus Times"
+            android:theme="@style/BusTheme"
             android:parentActivityName=".MainMenu">
         </activity>
     </application>

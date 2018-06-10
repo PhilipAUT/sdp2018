@@ -3,8 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="mapColour">#ffaf40</color>
-    <color name="eventColour">#df3a92</color>
-    <color name="snakeColour">#4050ff</color>
-    <color name="BusCoulor">#60ff40</color>
+    <color name="mapColour">#d48921</color>
+    <color name="eventColour">#da2a42</color>
+    <color name="snakeColour">#343d9f</color>
+    <color name="BusCoulor">#6ca621</color>
 </resources>
